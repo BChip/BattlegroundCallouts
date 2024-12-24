@@ -24,7 +24,7 @@ jobs:
       - name: Publish Release
         uses: ncipollo/release-action@v1
         with:
-          artifacts: repository.zip
+          artifacts: BattlegroundCallouts.zip
           token: ${{ secrets.GITHUB_TOKEN }}
           tag: ${{ github.ref_name }}
           name: ${{ github.ref_name }} # Release name matches the tag
