@@ -1,0 +1,8 @@
+## Interface: 100200
+## Title: Battleground Callouts
+## Notes: Helps with communication in battlegrounds
+## Author: BChip
+## Version: 1.0
+## IconTexture: Interface\AddOns\ScoreboardScreenshot\textures\icon
+
+Callouts.lua
