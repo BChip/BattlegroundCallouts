@@ -1,13 +1,13 @@
-name: Create and Publish Release
+name: Zip Repository on Main Push
 
 on:
   push:
-    tags:
-      - "v*.*.*" # Trigger on version tags like v1.0.0
+    branches:
+      - main # Trigger only when changes are pushed to the main branch
 
 jobs:
-  release:
-    name: Create Release
+  zip-and-upload:
+    name: Zip Repository
     runs-on: ubuntu-latest
 
     steps:
@@ -20,17 +20,9 @@ jobs:
         run: |
           zip -r repository.zip .
 
-      # Publish the release
-      - name: Publish Release
-        uses: ncipollo/release-action@v1
+      # Upload the artifact to GitHub Actions
+      - name: Upload ZIP as Artifact
+        uses: actions/upload-artifact@v3
         with:
-          artifacts: repository.zip
-          token: ${{ secrets.GITHUB_TOKEN }}
-          tag: ${{ github.ref_name }}
-          releaseName: Release ${{ github.ref_name }}
-          body: |
-            A new release has been published:
-            - Tag: ${{ github.ref_name }}
-            - Description: Automated release zip archive.
-          draft: false
-          prerelease: false
+          name: repository-zip
+          path: repository.zip
