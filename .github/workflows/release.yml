@@ -15,10 +15,13 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # Create a zip archive of the repository
-      - name: Create ZIP archive
+      # Move files into a BattlegroundCallouts folder and create a zip archive
+      - name: Prepare ZIP archive
         run: |
-          zip -r BattlegroundCallouts.zip .
+          mkdir BattlegroundCallouts
+          shopt -s extglob # Enable extended globbing
+          mv !(BattlegroundCallouts) BattlegroundCallouts/
+          zip -r BattlegroundCallouts.zip BattlegroundCallouts/
 
       # Publish the release
       - name: Publish Release
