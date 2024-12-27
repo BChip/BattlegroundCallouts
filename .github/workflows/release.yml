@@ -23,7 +23,7 @@ jobs:
           mv !(BattlegroundCallouts) BattlegroundCallouts/
           zip -r BattlegroundCallouts.zip BattlegroundCallouts/
 
-      # Publish the release
+      # Publish the release on GitHub
       - name: Publish Release
         uses: ncipollo/release-action@v1
         with:
@@ -37,3 +37,13 @@ jobs:
             - Description: Automated release zip archive.
           draft: false
           prerelease: false
+
+      # Upload to CurseForge
+      - name: Upload to CurseForge
+        env:
+          CURSEFORGE_API_KEY: ${{ secrets.CURSEFORGE_API_KEY }}
+        run: |
+          curl -X POST https://wow.curseforge.com/api/projects/1164990/upload-file \
+            -H "x-api-token: $CURSEFORGE_API_KEY" \
+            -F "file=@BattlegroundCallouts.zip" \
+            -F "metadata={\"changelog\": \"Automated release for ${{ github.ref_name }}\", \"releaseType\": \"release\", \"gameVersions\": [12215, 11926, 11596, 11274]}"
