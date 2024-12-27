@@ -9,7 +9,14 @@ local bgButtons = {
         { text = "INC BS",      message = "Incoming at Blacksmith!",  clear = "Blacksmith Clear!",  tooltip = "Report incoming enemies at Blacksmith" },
         { text = "INC Farm",    message = "Incoming at Farm!",        clear = "Farm Clear!",        tooltip = "Report incoming enemies at Farm" },
     },
-    ["Warsong Gulch"] = {
+    ["Silverwing Hold"] = {
+        { text = "EFC Mid",    message = "Enemy Flag Carrier is at Mid!",           tooltip = "Report Enemy Flag Carrier at Mid" },
+        { text = "EFC Tunnel", message = "Enemy Flag Carrier is in our Tunnel!",    tooltip = "Report Enemy Flag Carrier in our Tunnel" },
+        { text = "EFC Roof",   message = "Enemy Flag Carrier is on our Roof!",      tooltip = "Report Enemy Flag Carrier on our Roof" },
+        { text = "EFC Ramp",   message = "Enemy Flag Carrier is on our Ramp!",      tooltip = "Report Enemy Flag Carrier on our Ramp" },
+        { text = "EFC GY",     message = "Enemy Flag Carrier is in our Graveyard!", tooltip = "Report Enemy Flag Carrier in our Graveyard" },
+    },
+    ["Warsong Lumber Mill"] = {
         { text = "EFC Mid",    message = "Enemy Flag Carrier is at Mid!",           tooltip = "Report Enemy Flag Carrier at Mid" },
         { text = "EFC Tunnel", message = "Enemy Flag Carrier is in our Tunnel!",    tooltip = "Report Enemy Flag Carrier in our Tunnel" },
         { text = "EFC Roof",   message = "Enemy Flag Carrier is on our Roof!",      tooltip = "Report Enemy Flag Carrier on our Roof" },
