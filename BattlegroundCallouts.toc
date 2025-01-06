@@ -1,8 +1,8 @@
-## Interface: 110002
+## Interface: 110007
 ## Title: BattlegroundCallouts
 ## Notes: Helps with communication in battlegrounds
 ## Author: BChip
 ## Version: 1.0
 ## IconTexture: Interface\AddOns\BattlegroundCallouts\textures\icon
 
-Callouts.lua
+BattlegroundCallouts.lua

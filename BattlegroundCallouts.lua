@@ -1,5 +1,3 @@
-local addonName, addon = ...
-
 -- Battleground-specific button configurations
 local bgButtons = {
     ["Arathi Basin"] = {
