@@ -55,6 +55,13 @@ local bgButtons = {
         { text = "INC Farm",   message = "Incoming at Farm!",   clear = "Farm Clear!",   tooltip = "Report incoming enemies at Farm" },
         { text = "INC Quary",  message = "Incoming at Quary!",  clear = "Quary Clear!",  tooltip = "Report incoming enemies at Quary" },
     },
+    ["Great Hall"] = {
+        { text = "INC Shrine", message = "Incoming at Shrine!", clear = "Shrine Clear!", tooltip = "Report incoming enemies at Shrine" },
+        { text = "INC Ruins",  message = "Incoming at Ruins!",  clear = "Ruins Clear!",  tooltip = "Report incoming enemies at Ruins" },
+        { text = "INC Market", message = "Incoming at Market!", clear = "Market Clear!", tooltip = "Report incoming enemies at Market" },
+        { text = "INC Farm",   message = "Incoming at Farm!",   clear = "Farm Clear!",   tooltip = "Report incoming enemies at Farm" },
+        { text = "INC Quary",  message = "Incoming at Quary!",  clear = "Quary Clear!",  tooltip = "Report incoming enemies at Quary" },
+    },
     ["Deephaul Ravine"] = {
         { text = "Crystal Spawn", message = "Crystal has spawned in the middle!",                                       tooltip = "Notify team that the crystal is at the center of the map." },
         { text = "Alliance Cart", message = "Alliance cart is moving along the tracks from bottom right to upper mid!", tooltip = "Report the Alliance cart's path and progress." },
